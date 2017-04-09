@@ -7,9 +7,11 @@ import { Recipe } from '../recipe';
 })
 export class RecipeListComponent implements OnInit {
 
-  recipes: Recipe[] = [];
+  recipes: Recipe[] = [
+    new Recipe('Air Max', 'Dummy', 'http://pm1.narvii.com/5807/1a65f5532dc4ea1628db6d04144c0178fb44a717_hq.jpg', []),
+    new Recipe('Dummy', 'Dummy', 'http://images3.nike.com/is/image/DotCom/PDP_HERO_ZOOM/849559_001_C_PREM/air-max-2017-mens-running-shoe.jpg', []),
+  ];
   @Output() recipeSelected = new EventEmitter();
-  recipe = new Recipe('Dummy', 'Dummy', 'http://thumbs1.ebaystatic.com/d/l225/m/mmO4j9mo_hxxVRI9oarv-Hw.jpg');
   constructor() { }
 
   ngOnInit () {
